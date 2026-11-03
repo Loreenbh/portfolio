@@ -1,0 +1,224 @@
+.intro {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 40px 80px;
+  overflow: hidden;
+  background: #211c19;
+  color: #eae3d8;
+}
+
+.introContent {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.introLabel {
+  margin-bottom: 118px;
+  font-family: var(--font-body), sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  opacity: 0.65;
+}
+
+.introTitle {
+  margin: 0;
+  font-family: var(--font-display), serif;
+  font-size: clamp(84px, 9vw, 138px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+}
+
+.titleFirst {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.titleSecond {
+  font-style: italic;
+  font-weight: 400;
+  color: #b7afa2;
+  background:
+    radial-gradient(
+      ellipse at 18% 28%,
+      transparent 0 18%,
+      rgba(62, 54, 46, 0.3) 19% 19.5%,
+      transparent 20% 100%
+    ),
+    radial-gradient(
+      ellipse at 76% 68%,
+      transparent 0 22%,
+      rgba(75, 66, 56, 0.24) 23% 23.5%,
+      transparent 24% 100%
+    ),
+    repeating-linear-gradient(
+      108deg,
+      transparent 0 23px,
+      rgba(70, 61, 52, 0.18) 24px 25px,
+      transparent 26px 47px
+    ),
+    repeating-linear-gradient(
+      28deg,
+      rgba(255, 255, 255, 0.05) 0 1px,
+      transparent 1px 5px
+    ),
+    linear-gradient(132deg, #d0c7b9 0%, #9f9689 48%, #c1b8aa 100%);
+  background-size:
+    178px 126px,
+    211px 163px,
+    97px 100%,
+    7px 7px,
+    100% 100%;
+  background-position:
+    8% 12%,
+    82% 76%,
+    0 0,
+    0 0,
+    0 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.introDetails {
+  margin-top: 118px;
+}
+
+.introRole {
+  font-family: var(--font-graphic), sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.2em;
+}
+
+.introDescription {
+  max-width: 390px;
+  margin: 18px auto 0;
+  font-family: var(--font-body), sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.8;
+  opacity: 0.65;
+}
+
+.introDisciplines {
+  margin-top: 68px;
+  font-family: var(--font-graphic), sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  opacity: 0.85;
+}
+
+.introScroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: var(--font-body), sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  opacity: 0.55;
+  white-space: nowrap;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .intro {
+    padding: 100px 24px 70px;
+  }
+
+  .introLabel {
+    margin-bottom: 42px;
+    font-size: 9px;
+  }
+
+  .introTitle {
+    font-size: clamp(48px, 12vw, 76px);
+    line-height: 1;
+  }
+
+  .introDetails {
+    margin-top: 42px;
+  }
+
+  .introRole {
+    font-size: 15px;
+  }
+
+  .introDescription {
+    max-width: 290px;
+    font-size: 12px;
+  }
+
+  .introDisciplines {
+    margin-top: 40px;
+    font-size: 14px;
+  }
+
+  .introScroll {
+    bottom: 24px;
+    font-size: 8px;
+  }
+}
+
+/* SCROLL REVEAL */
+
+.introLabel,
+.titleFirst,
+.titleSecond,
+.introRole,
+.introDescription,
+.introDisciplines {
+  will-change: transform, opacity;
+}
+
+.titleFirst,
+.titleSecond {
+  display: block;
+}
+
+/* Fragments stay exactly over their source character until hovered. */
+.dustText {
+  display: block;
+}
+
+.dustChar {
+  position: relative;
+  display: inline-block;
+}
+
+.dustFragment {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  color: currentColor;
+  -webkit-text-fill-color: currentColor;
+  transform-origin: center;
+}
+
+.titleSecond .dustFragment {
+  color: #b7afa2;
+  -webkit-text-fill-color: #b7afa2;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .dustFragment {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dustFragment {
+    display: none;
+  }
+}

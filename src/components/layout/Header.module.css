@@ -1,0 +1,179 @@
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 32px 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 100;
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.sound,
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+
+/* SOUND ICON */
+
+.sound {
+  width: 36px;
+  height: 36px;
+}
+
+.equalizer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 28px;
+}
+
+.equalizer span {
+  display: block;
+  width: 1px;
+  height: 19px;
+  background: currentColor;
+  border-radius: 2px;
+}
+
+/* SOUND ON */
+
+.soundActive .equalizer span {
+  animation: wave 0.45s ease-in-out infinite alternate;
+}
+
+.soundActive .equalizer span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.soundActive .equalizer span:nth-child(2) {
+  animation-delay: 0.09s;
+}
+
+.soundActive .equalizer span:nth-child(3) {
+  animation-delay: 0.18s;
+}
+
+.soundActive .equalizer span:nth-child(4) {
+  animation-delay: 0.27s;
+}
+
+.soundActive .equalizer span:nth-child(5) {
+  animation-delay: 0.36s;
+}
+
+@keyframes wave {
+  from {
+    height: 5px;
+  }
+
+  to {
+    height: 26px;
+  }
+}
+
+/* MENU ICON */
+
+.menuButton {
+  width: 24px;
+  height: 24px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menuButton span {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: currentColor;
+  transition:
+    transform 0.35s ease,
+    opacity 0.25s ease;
+}
+
+.menuOpen span:first-child {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menuOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuOpen span:last-child {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* DROPDOWN */
+
+.dropdown {
+  position: absolute;
+  top: 72px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 24px 0;
+}
+
+.dropdown a {
+  transition: opacity 0.3s ease;
+}
+
+.dropdown a:hover {
+  opacity: 0.5;
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .soundActive .equalizer span,
+  .menuButton span {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .header {
+    padding: 24px 20px;
+  }
+
+  .controls {
+    gap: 18px;
+  }
+
+  .dropdown {
+    right: 20px;
+    top: 60px;
+  }
+}
