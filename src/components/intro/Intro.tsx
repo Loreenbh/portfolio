@@ -140,7 +140,7 @@ export default function Intro() {
         <p className={styles.introScroll}>SCROLL TO EXPLORE</p>
 
         <h1 className={styles.introTitle}>
-          <span className={styles.titleFirst}>Creating beyond </span>
+          <span className={styles.titleFirst} data-transition-title-first>Creating beyond </span>
           <span
             className={styles.titleSecond}
             data-transition-title
