@@ -1,31 +1,32 @@
 .sceneSection {
   position: relative;
-  height: 200svh;
+  height: 145svh;
   background: transparent;
+  pointer-events: none;
 }
 
 .sceneStage {
-  position: sticky;
-  top: 0;
+  position: relative;
   width: 100%;
-  height: 100svh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
 }
 
 .sceneFrame {
-  position: absolute;
-  top: 10%;
+  position: fixed;
+  top: 74svh;
   left: 50%;
-  transform: translate(-50%, -50%);
+  z-index: 0;
+  transform: translateX(-50%);
 
-  width: 62vw;
-  height: 62vh;
+  width: 72vw;
+  height: 26svh;
 
   overflow: hidden;
   background: #eae3d8;
-  border-radius: 3%;
+  border-radius: 2%;
+  opacity: 0;
+  pointer-events: none;
+  will-change: top, width, height, border-radius, opacity;
 }
 
 .sceneContent {
@@ -33,4 +34,18 @@
   inset: 0;
   width: 100%;
   height: 100%;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .sceneSection {
+    height: 125svh;
+  }
+
+  .sceneFrame {
+    top: 76svh;
+    width: 88vw;
+    height: 24svh;
+  }
 }
