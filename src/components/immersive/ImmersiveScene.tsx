@@ -19,7 +19,7 @@ export default function ImmersiveScene() {
       "[data-transition-title]",
     );
     const titleFirst = document.querySelector<HTMLElement>(
-      ".titleFirst",
+      "[data-transition-title-first]",
     );
     const details = document.querySelector<HTMLElement>(
       "[data-transition-details]",
