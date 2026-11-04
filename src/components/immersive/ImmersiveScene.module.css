@@ -13,7 +13,7 @@
 
 .sceneFrame {
   position: fixed;
-  top: 74svh;
+  top: 80svh;
   left: 50%;
   z-index: 0;
   transform: translateX(-50%);
@@ -44,7 +44,7 @@
   }
 
   .sceneFrame {
-    top: 76svh;
+    top: 84svh;
     width: 88vw;
     height: 24svh;
   }
