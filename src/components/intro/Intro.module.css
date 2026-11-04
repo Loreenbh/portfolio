@@ -4,13 +4,13 @@
   padding: 0 35px;
   display: block;
   overflow: clip;
-  background: #211c19;
+  background: transparent;
   color: #eae3d8;
 }
 
 .introContent {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -149,6 +149,7 @@
       100% 100%;
   }
 }
+
 /* INFORMATIONS PROFESSIONNELLES */
 
 .introDetails {
@@ -157,6 +158,7 @@
   padding: 35px 45px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   position: relative;
+  color: #eae3d8;
 }
 
 .introRole {
@@ -183,6 +185,7 @@
   font-weight: 400;
   letter-spacing: 0.2em;
   opacity: 1;
+  color: #eae3d8;
 }
 
 /* INDICATION DE SCROLL */
