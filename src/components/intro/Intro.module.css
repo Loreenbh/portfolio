@@ -208,46 +208,59 @@
 @media (max-width: 600px) {
   .intro {
     min-height: 170svh;
-    padding: 0 24px;
+    padding: 0 20px;
   }
 
   .introContent {
-    padding-top: 35svh;
+    padding-top: 10svh;
+  }
+
+  .introLabel {
+    margin-bottom: 32px;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+  }
+
+  .introScroll {
+    margin-top: 22px;
+    font-size: 8px;
+    letter-spacing: 0.2em;
   }
 
   .introTitle {
-    font-size: clamp(48px, 12vw, 76px);
+    margin-top: 65px;
     line-height: 1;
   }
 
   .titleFirst {
-    font-size: clamp(42px, 10vw, 60px);
+    font-size: clamp(32px, 8.5vw, 52px);
   }
 
   .titleSecond {
-    font-size: clamp(60px, 13vw, 82px);
+    font-size: clamp(46px, 14vw, 72px);
   }
 
   .introDetails {
-    margin-top: 42px;
+    width: 100%;
+    margin-top: 55px;
+    padding: 28px 18px;
   }
 
   .introRole {
-    font-size: 15px;
+    font-size: 13px;
+    letter-spacing: 0.15em;
   }
 
   .introDescription {
     max-width: 290px;
     font-size: 12px;
+    line-height: 1.7;
   }
 
   .introDisciplines {
     margin-top: 40px;
-    font-size: 14px;
-  }
-
-  .introScroll {
-    font-size: 8px;
+    font-size: 12px;
+    letter-spacing: 0.15em;
   }
 }
 
