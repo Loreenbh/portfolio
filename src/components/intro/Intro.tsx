@@ -119,16 +119,7 @@ export default function Intro() {
               },
               40,
             )
-            .to(
-              "#home",
-              {
-                backgroundColor: "#5b5147",
-                duration: 30,
-                ease: "none",
-              },
-              65,
-            )
-            .to({}, { duration: 18 }, 95);
+            .to({}, { duration: 18 }, 78);
         }
       },
       section,
@@ -150,10 +141,18 @@ export default function Intro() {
 
         <h1 className={styles.introTitle}>
           <span className={styles.titleFirst}>Creating beyond </span>
-          <span className={styles.titleSecond}> the screen.</span>
+          <span
+            className={styles.titleSecond}
+            data-transition-title
+          >
+            {" "}the screen.
+          </span>
         </h1>
 
-        <div className={styles.introDetails}>
+        <div
+          className={styles.introDetails}
+          data-transition-details
+        >
           <p className={styles.introRole}>CREATIVE DEVELOPER</p>
 
           <p className={styles.introDescription}>
@@ -162,7 +161,12 @@ export default function Intro() {
           </p>
         </div>
 
-        <p className={styles.introDisciplines}>DESIGN · 3D · CODE</p>
+        <p
+          className={styles.introDisciplines}
+          data-transition-disciplines
+        >
+          DESIGN · 3D · CODE
+        </p>
       </div>
     </section>
   );
