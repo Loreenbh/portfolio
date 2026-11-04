@@ -206,6 +206,7 @@ function TemporaryObject() {
   return (
     <mesh
       ref={objectRef}
+      castShadow
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
@@ -234,9 +235,25 @@ function TemporaryObject() {
 
 export default function IntroObject() {
   return (
-    <Canvas camera={{ position: [0, 0, 4], fov: 45 }}>
-      <ambientLight intensity={1.2} />
-      <directionalLight position={[3, 3, 4]} intensity={2.2} />
+    <Canvas
+      camera={{ position: [0, 0, 4], fov: 45 }}
+      dpr={[1, 1.5]}
+      gl={{ antialias: true, alpha: true }}
+    >
+      <hemisphereLight
+        args={["#fff6e8", "#594b3d", 1.4]}
+      />
+      <directionalLight
+        position={[3, 4, 4]}
+        intensity={2.4}
+        color="#fff4e3"
+      />
+      <pointLight
+        position={[-3, -1, 2]}
+        intensity={1.2}
+        distance={7}
+        color="#8b755d"
+      />
       <TemporaryObject />
     </Canvas>
   );

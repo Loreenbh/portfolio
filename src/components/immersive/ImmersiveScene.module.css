@@ -1,0 +1,36 @@
+.sceneSection {
+  position: relative;
+  height: 200svh;
+  background: transparent;
+}
+
+.sceneStage {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sceneFrame {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 62vw;
+  height: 62vh;
+
+  overflow: hidden;
+  background: #eae3d8;
+  border-radius: 3%;
+}
+
+.sceneContent {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}

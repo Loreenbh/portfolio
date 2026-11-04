@@ -1,14 +1,12 @@
 .intro {
   position: relative;
-  min-height: 170svh;
+  min-height: 140svh;
   padding: 0 35px;
   display: block;
   overflow: clip;
   background: #211c19;
   color: #eae3d8;
 }
-
-/* COMPOSITION */
 
 .introContent {
   position: relative;
@@ -39,6 +37,10 @@
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  transform: translateZ(0);
 }
 
 .introAnimation canvas {
@@ -62,6 +64,8 @@
 .titleSecond {
   display: block;
   font-weight: 400;
+  transform-origin: center;
+  will-change: transform, opacity;
 }
 
 .titleFirst {
@@ -77,18 +81,21 @@
   background:
     radial-gradient(
       ellipse at 20% 35%,
-      rgba(255, 255, 255, 0.2) 0 1%,
-      transparent 24%
+      rgba(255, 255, 255, 0.34) 0 3%,
+      rgba(255, 255, 255, 0.08) 14%,
+      transparent 38%
     ),
     radial-gradient(
       ellipse at 75% 65%,
-      rgba(35, 29, 24, 0.45) 0 2%,
-      transparent 35%
+      rgba(35, 29, 24, 0.62) 0 5%,
+      rgba(35, 29, 24, 0.18) 22%,
+      transparent 48%
     ),
     radial-gradient(
       ellipse at 48% 20%,
-      rgba(82, 69, 14, 0.856) 0 1%,
-      transparent 30%
+      rgba(106, 87, 42, 0.92) 0 4%,
+      rgba(106, 87, 42, 0.25) 18%,
+      transparent 42%
     ),
     linear-gradient(
       125deg,
@@ -114,7 +121,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: mineralClouds 15s ease-in-out infinite alternate;
+  animation: mineralClouds 9s ease-in-out infinite alternate;
 }
 
 @keyframes mineralClouds {
@@ -166,7 +173,7 @@
   font-size: 13px;
   font-weight: 300;
   line-height: 1.8;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .introDisciplines {
@@ -175,7 +182,7 @@
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.2em;
-  opacity: 0;
+  opacity: 1;
 }
 
 /* INDICATION DE SCROLL */
