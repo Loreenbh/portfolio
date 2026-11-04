@@ -1,148 +1,231 @@
 .intro {
   position: relative;
-  min-height: 100svh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 120px 40px 80px;
-  overflow: hidden;
+  min-height: 170svh;
+  padding: 0 35px;
+  display: block;
+  overflow: clip;
   background: #211c19;
   color: #eae3d8;
 }
 
+/* COMPOSITION */
+
 .introContent {
   position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 10svh;
   text-align: center;
 }
 
 .introLabel {
-  margin-bottom: 118px;
-  font-family: var(--font-body), sans-serif;
-  font-size: 10px;
+  width: 100%;
+  margin-bottom: 50px;
+  font-family: var(--font-roboto), sans-serif;
+  font-size: 12px;
   font-weight: 300;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.4em;
   opacity: 0.65;
 }
 
+.introAnimation {
+  width: min(850px, 100%);
+  aspect-ratio: 17 / 12;
+  height: auto;
+  background: #c9beac;
+  border-radius: 3%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.introAnimation canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* TITRE PRINCIPAL */
+
 .introTitle {
-  margin: 0;
-  font-family: var(--font-display), serif;
+  margin-top: 100px;
+  font-family: var(--font-bodoni), serif;
   font-size: clamp(84px, 9vw, 138px);
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: -0.065em;
 }
 
+.titleFirst,
+.titleSecond {
+  display: block;
+  font-weight: 400;
+}
+
 .titleFirst {
   font-style: normal;
-  font-weight: 400;
+  font-size: 85px;
 }
 
 .titleSecond {
   font-style: italic;
-  font-weight: 400;
-  color: #b7afa2;
+  color: #c4bbae;
+  font-size: 170px;
+
   background:
     radial-gradient(
-      ellipse at 18% 28%,
-      transparent 0 18%,
-      rgba(62, 54, 46, 0.3) 19% 19.5%,
-      transparent 20% 100%
+      ellipse at 20% 35%,
+      rgba(255, 255, 255, 0.2) 0 1%,
+      transparent 24%
     ),
     radial-gradient(
-      ellipse at 76% 68%,
-      transparent 0 22%,
-      rgba(75, 66, 56, 0.24) 23% 23.5%,
-      transparent 24% 100%
+      ellipse at 75% 65%,
+      rgba(35, 29, 24, 0.45) 0 2%,
+      transparent 35%
     ),
-    repeating-linear-gradient(
-      108deg,
-      transparent 0 23px,
-      rgba(70, 61, 52, 0.18) 24px 25px,
-      transparent 26px 47px
+    radial-gradient(
+      ellipse at 48% 20%,
+      rgba(82, 69, 14, 0.856) 0 1%,
+      transparent 30%
     ),
-    repeating-linear-gradient(
-      28deg,
-      rgba(255, 255, 255, 0.05) 0 1px,
-      transparent 1px 5px
-    ),
-    linear-gradient(132deg, #d0c7b9 0%, #9f9689 48%, #c1b8aa 100%);
+    linear-gradient(
+      125deg,
+      #d8d0c3 0%,
+      #795f3b 28%,
+      #d0c7b9 48%,
+      #554e46 72%,
+      #c9bfb1 100%
+    );
+
   background-size:
-    178px 126px,
-    211px 163px,
-    97px 100%,
-    7px 7px,
-    100% 100%;
+    420px 300px,
+    500px 360px,
+    380px 280px,
+    200% 200%;
+
   background-position:
-    8% 12%,
-    82% 76%,
     0 0,
-    0 0,
+    100% 100%,
+    50% 0,
     0 0;
+
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: mineralClouds 15s ease-in-out infinite alternate;
 }
 
+@keyframes mineralClouds {
+  0% {
+    background-position:
+      0% 20%,
+      100% 80%,
+      30% 0%,
+      0% 0%;
+  }
+
+  50% {
+    background-position:
+      35% 70%,
+      45% 20%,
+      80% 60%,
+      50% 50%;
+  }
+
+  100% {
+    background-position:
+      80% 10%,
+      0% 90%,
+      15% 100%,
+      100% 100%;
+  }
+}
+/* INFORMATIONS PROFESSIONNELLES */
+
 .introDetails {
-  margin-top: 118px;
+  max-width: 550px;
+  margin: 100px auto 0;
+  padding: 35px 45px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
 }
 
 .introRole {
-  font-family: var(--font-graphic), sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-size: 17px;
   letter-spacing: 0.2em;
+  font-weight: 200;
 }
 
 .introDescription {
   max-width: 390px;
   margin: 18px auto 0;
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-size: 13px;
   font-weight: 300;
   line-height: 1.8;
-  opacity: 0.65;
+  opacity: 0.7;
 }
 
 .introDisciplines {
-  margin-top: 68px;
-  font-family: var(--font-graphic), sans-serif;
-  font-size: 16px;
+  margin-top: 40px;
+  font-family: var(--font-roboto), sans-serif;
+  font-size: 15px;
+  font-weight: 400;
   letter-spacing: 0.2em;
-  opacity: 0.85;
+  opacity: 0;
 }
 
+/* INDICATION DE SCROLL */
+
 .introScroll {
-  position: absolute;
-  bottom: 36px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  font-family: var(--font-body), sans-serif;
-  font-size: 9px;
+  margin-top: 30px;
+  text-align: center;
+  font-family: var(--font-roboto), sans-serif;
+  font-size: 10px;
   font-weight: 300;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.3em;
   opacity: 0.55;
   white-space: nowrap;
+}
+
+/* PERFORMANCE */
+
+.introLabel,
+.titleFirst,
+.titleSecond,
+.introRole,
+.introDescription,
+.introDisciplines,
+.introScroll {
+  will-change: transform, opacity;
 }
 
 /* MOBILE */
 
 @media (max-width: 600px) {
   .intro {
-    padding: 100px 24px 70px;
+    min-height: 170svh;
+    padding: 0 24px;
   }
 
-  .introLabel {
-    margin-bottom: 42px;
-    font-size: 9px;
+  .introContent {
+    padding-top: 35svh;
   }
 
   .introTitle {
     font-size: clamp(48px, 12vw, 76px);
     line-height: 1;
+  }
+
+  .titleFirst {
+    font-size: clamp(42px, 10vw, 60px);
+  }
+
+  .titleSecond {
+    font-size: clamp(60px, 13vw, 82px);
   }
 
   .introDetails {
@@ -164,61 +247,20 @@
   }
 
   .introScroll {
-    bottom: 24px;
     font-size: 8px;
   }
 }
 
-/* SCROLL REVEAL */
-
-.introLabel,
-.titleFirst,
-.titleSecond,
-.introRole,
-.introDescription,
-.introDisciplines {
-  will-change: transform, opacity;
-}
-
-.titleFirst,
-.titleSecond {
-  display: block;
-}
-
-/* Fragments stay exactly over their source character until hovered. */
-.dustText {
-  display: block;
-}
-
-.dustChar {
-  position: relative;
-  display: inline-block;
-}
-
-.dustFragment {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0;
-  color: currentColor;
-  -webkit-text-fill-color: currentColor;
-  transform-origin: center;
-}
-
-.titleSecond .dustFragment {
-  color: #b7afa2;
-  -webkit-text-fill-color: #b7afa2;
-}
-
-@media (hover: none), (pointer: coarse) {
-  .dustFragment {
-    display: none;
-  }
-}
+/* ACCESSIBILITÉ */
 
 @media (prefers-reduced-motion: reduce) {
-  .dustFragment {
-    display: none;
+  .introLabel,
+  .titleFirst,
+  .titleSecond,
+  .introRole,
+  .introDescription,
+  .introDisciplines,
+  .introScroll {
+    will-change: auto;
   }
 }

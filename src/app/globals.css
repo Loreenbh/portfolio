@@ -15,7 +15,14 @@
 
 html {
   min-height: 100%;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+
+  /* Masquer la scrollbar native */
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 html,
@@ -29,9 +36,12 @@ body {
 body {
   display: flex;
   flex-direction: column;
+
   color: var(--foreground);
   background: var(--background);
+
   font-family: var(--font-body), sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

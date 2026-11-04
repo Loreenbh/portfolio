@@ -58,7 +58,7 @@
 .equalizer span {
   display: block;
   width: 1px;
-  height: 19px;
+  height: 15px;
   background: currentColor;
   border-radius: 2px;
 }
@@ -95,7 +95,7 @@
   }
 
   to {
-    height: 26px;
+    height: 20px;
   }
 }
 

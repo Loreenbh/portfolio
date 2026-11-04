@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./Header.module.css";
-import { Menu, AudioLines, AudioLinesOff } from "lucide-react";
+import Image from "next/image";
 
 const menuItems = [
   { label: "HOME", href: "#home" },
@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <a href="#home" className={styles.logo} aria-label="BHL - Home">
-        BHL
+        <Image src="/logoTemp.png" alt="BHL" width={120} height={60} priority />
       </a>
 
       <div className={styles.controls}>

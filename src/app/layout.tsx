@@ -1,6 +1,5 @@
-
 import type { Metadata } from "next";
-import { Bodoni_Moda, Roboto, Bebas_Neue } from "next/font/google";
+import { Bodoni_Moda, Roboto } from "next/font/google";
 import "./globals.css";
 
 const bodoni = Bodoni_Moda({
@@ -15,12 +14,6 @@ const roboto = Roboto({
   weight: ["300", "400", "500"],
 });
 
-const bebas = Bebas_Neue({
-  variable: "--font-bebas",
-  subsets: ["latin"],
-  weight: "400",
-});
-
 export const metadata: Metadata = {
   title: "BHL — Creative Developer",
   description: "Design · 3D · Code",
@@ -30,7 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${bodoni.variable} ${roboto.variable} ${bebas.variable}`}
+      className={`${bodoni.variable} ${roboto.variable}`}
     >
       <body>{children}</body>
     </html>

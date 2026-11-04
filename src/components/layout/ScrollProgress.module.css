@@ -1,0 +1,79 @@
+.scrollProgress {
+  position: fixed;
+  top: 50%;
+  right: 28px;
+  z-index: 200;
+
+  width: 18px;
+  height: 120px;
+
+  transform: translateY(-50%);
+
+  cursor: grab;
+  touch-action: none;
+  outline: none;
+}
+
+.scrollProgress:active {
+  cursor: grabbing;
+}
+
+/* PISTE */
+
+.track {
+  position: absolute;
+  top: 0;
+  left: 8px;
+
+  width: 1px;
+  height: 100%;
+
+  background: rgba(234, 227, 216, 0.2);
+}
+
+/* CURSEUR */
+
+.thumb {
+  position: absolute;
+  left: 5px;
+
+  width: 7px;
+  height: 20%;
+
+  border-radius: 10px;
+  background: #b7afa2;
+
+  transition:
+    background 0.3s ease,
+    width 0.3s ease,
+    left 0.3s ease;
+}
+
+.scrollProgress:hover .thumb,
+.scrollProgress:focus-visible .thumb {
+  left: 4px;
+  width: 9px;
+  background: #eae3d8;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .scrollProgress {
+    right: 10px;
+    height: 90px;
+    transform: translateY(-50%);
+  }
+
+  .track {
+    left: 8px;
+  }
+}
+
+/* ACCESSIBILITÉ */
+
+@media (prefers-reduced-motion: reduce) {
+  .thumb {
+    transition: none;
+  }
+}
